@@ -15,4 +15,15 @@ const arr = [1, 2, 3];
 
 const a = arr.map(x => x * x); // arrow function (fat arrow)
 
-console.log(a);
+// console.log(a);
+
+const b = {
+    foo: 'bar',
+    run: function() {
+        setTimeout(() => { // arrow function ko co context -> this la context cua run -> b.run() -> 'bar'
+            console.log(this.foo);
+        }, 2000)
+    }
+}
+
+b.run();
