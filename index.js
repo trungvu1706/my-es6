@@ -17,6 +17,8 @@ const a = arr.map(x => x * x); // arrow function (fat arrow)
 
 // console.log(a);
 
+
+
 const b = {
     foo: 'bar',
     run: function() {
@@ -26,4 +28,14 @@ const b = {
     }
 }
 
-b.run();
+// b.run();
+
+
+function hello(name) {
+    return `Hi, 
+    ${name}`
+}
+
+const result = hello('Trung');
+
+console.log(result);
