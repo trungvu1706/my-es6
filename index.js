@@ -30,12 +30,24 @@ const b = {
 
 // b.run();
 
-
+// template String
 function hello(name) {
     return `Hi, 
     ${name}`
 }
 
-const result = hello('Trung');
+// const result = hello('Trung');
 
+// console.log(result);
+
+//argument
+
+function sum() {
+    const number = Array.from(arguments); // from method convert any Array-like object to Array
+    return number.reduce(function(num, sum) {
+        return sum + num;
+    }, 0)
+}
+
+const result = sum(1, 2, 3, 10, 50);
 console.log(result);
