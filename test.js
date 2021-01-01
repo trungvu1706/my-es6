@@ -20,4 +20,4 @@ function sum() {
     return result;
 }
 
-console.log(sum(1, true, '2', '2'));
+// console.log(sum(1, true, '2', '2'));

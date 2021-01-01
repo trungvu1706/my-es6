@@ -75,7 +75,7 @@ function sum() {
     return numbers.reduce((sum, num) => (sum + num), 0);
 }
 
-console.log(sum(1, 2, 3, 4));
+// console.log(sum(1, 2, 3, 4));
 
 function average() {
     const x = sum.apply(null, arguments); // agruments la array-like object nen thoa man dk cua apply method (this, [prams1, prams2.....])
@@ -83,4 +83,16 @@ function average() {
     return x / arguments.length;
 }
 
-console.log(average(1, 2, 3));
+// console.log(average(1, 2, 3));
+
+
+//enhanced object literals
+const myName = 'Trung';
+const obj = {
+    myName,
+    run() {
+        console.log(`my name is ${myName} !`);
+    }
+};
+
+obj.run();
