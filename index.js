@@ -64,4 +64,23 @@ const person = {
     name: 'Trung'
 };
 
-greeting.call(person);
+// greeting.call(person);
+
+
+//apply 
+
+function sum() {
+    const numbers = Array.from(arguments);
+
+    return numbers.reduce((sum, num) => (sum + num), 0);
+}
+
+console.log(sum(1, 2, 3, 4));
+
+function average() {
+    const x = sum.apply(null, arguments); // agruments la array-like object nen thoa man dk cua apply method (this, [prams1, prams2.....])
+
+    return x / arguments.length;
+}
+
+console.log(average(1, 2, 3));
