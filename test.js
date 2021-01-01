@@ -10,7 +10,7 @@ function sum() {
     }, []);
 
     let result = flattened.reduce((sum, num) => {
-        if (typeof num !== 'string') {
+        if (typeof num == 'number') {
             return sum + num;
         } else {
             // console.log(sum);
@@ -20,4 +20,4 @@ function sum() {
     return result;
 }
 
-console.log(sum(1, '2', '2'));
+console.log(sum(1, true, '2', '2'));

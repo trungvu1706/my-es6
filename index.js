@@ -40,8 +40,8 @@ function hello(name) {
 
 // console.log(result);
 
-//argument
 
+//argument
 function sum() {
     const number = Array.from(arguments); // from method convert any Array-like object to Array
     return number.reduce(function(num, sum) {
@@ -50,4 +50,18 @@ function sum() {
 }
 
 const result = sum(1, 2, 3, 10, 50);
-console.log(result);
+// console.log(result);
+
+
+
+// call method
+function greeting() {
+    console.log(`hi my name is ${this.name} `);
+
+};
+
+const person = {
+    name: 'Trung'
+};
+
+greeting.call(person);
