@@ -66,7 +66,7 @@ class RangedHero extends Hero { //subClass
 }
 
 //before attack
-const heroA = new RangedHero('A', 100, 200, 10); // instance
+const heroA = new RangedHero('A', 100, 200, 10); // instance cua class do 
 const heroB = new Hero('B', 300, 300);
 // console.log({ heroA, heroB });
 
@@ -76,8 +76,15 @@ heroA.attack(heroB);
 
 // static
 class foo {
-    static something() {
+    static something() { // ham cua chinh class foo
         console.log('hello');
+    }
+
+    doSomething() {
+        console.log('haha');
     }
 }
 foo.something();
+
+const a = new foo(); // instance cua class foo
+a.doSomething();
