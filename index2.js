@@ -66,10 +66,18 @@ class RangedHero extends Hero { //subClass
 }
 
 //before attack
-const heroA = new RangedHero('A', 100, 200, 10);
+const heroA = new RangedHero('A', 100, 200, 10); // instance
 const heroB = new Hero('B', 300, 300);
-console.log({ heroA, heroB });
+// console.log({ heroA, heroB });
 
 //after attack
 heroA.attack(heroB);
-console.log({ heroA, heroB });
+// console.log({ heroA, heroB });
+
+// static
+class foo {
+    static something() {
+        console.log('hello');
+    }
+}
+foo.something();
