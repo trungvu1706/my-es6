@@ -84,7 +84,15 @@ class foo {
         console.log('haha');
     }
 }
-foo.something();
+// foo.something();
 
 const a = new foo(); // instance cua class foo
-a.doSomething();
+// a.doSomething();
+
+//...rest 
+
+function concat(seperater, ...strings) {
+    return strings.join(seperater);
+}
+
+console.log(concat('.', 'a', 'b', 'c'));
