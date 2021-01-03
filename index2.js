@@ -95,4 +95,16 @@ function concat(seperater, ...strings) {
     return strings.join(seperater);
 }
 
-console.log(concat('.', 'a', 'b', 'c'));
+// console.log(concat('.', 'a', 'b', 'c'));
+
+//higher order function
+
+function waitAndRun(func, ms) { // waitAndRun la 1 higher orders function 
+    setTimeout(func, ms);
+}
+
+const run = function() {
+    console.log('run');
+}
+
+waitAndRun(run, 2000);
