@@ -103,7 +103,7 @@ function waitAndRun(func, ms) { // waitAndRun la 1 higher orders function
     setTimeout(func, ms);
 }
 
-const run = function() {
+const run = function() { // run dc goi nhu 1 tham so cua waitAndRun()
     console.log('run');
 }
 
