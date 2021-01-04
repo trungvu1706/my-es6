@@ -86,7 +86,7 @@ class foo {
 }
 // foo.something();
 
-const a = new foo(); // instance cua class foo
+// const a = new foo(); // instance cua class foo
 // a.doSomething();
 
 //...rest 
@@ -107,4 +107,20 @@ const run = function() { // run dc goi nhu 1 tham so cua waitAndRun()
     console.log('run');
 }
 
-waitAndRun(run, 2000);
+// waitAndRun(run, 2000);
+
+
+//destructuring
+
+// const arr = [1, 2, 3, 4, 5];
+// const [a, ...b] = arr;
+// console.log(a, b);
+
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3
+}
+
+const { a, b, c } = obj;
+console.log(a, b, c);
