@@ -22,4 +22,31 @@ function sum() {
 
 
 
-console.log(sum(1, true, '2', '2'));
+// console.log(sum(1, true, '2', '2'));
+
+const exchangeRate = {
+    usd: {
+        vnd: 23371,
+        jpy: 107
+    },
+    vnd: {
+        baht: 0.0014
+    }
+};
+
+function exchange(amount) {
+    // your code here
+    return {
+        from: function(unitX) {
+            return {
+                to: function(unitY) {
+                    return exchangeRate[unitX][unitY] * amount;
+                }
+            }
+        }
+    }
+}
+
+const usdToVndAmount = exchange(100).from('usd').to('vnd');
+console.log(usdToVndAmount);
+const vndToBahtAmount = exchange(10000).from('vnd').to('baht');
